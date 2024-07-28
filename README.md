@@ -3,7 +3,14 @@
 * [{{ file.basename }}]({{ file.path | replace: '#','%23' }})
 {% endfor %}
 
-{% assign image_files = site.static_files | where: "image", false %}
-{% for a in image_files %}
+# 2
+{% assign fs = site.static_files %}
+{% for a in fs %}
+* [{{ a.basename }}]({{ a.path | replace: '#','%23' }})
+{% endfor %}
+
+# 3
+{% assign fs = site.static_files | where: "extname", '.jpg' %}
+{% for a in fs %}
 * [{{ a.basename }}]({{ a.path | replace: '#','%23' }})
 {% endfor %}
