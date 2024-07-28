@@ -1,4 +1,5 @@
 个人内容
+
 {% for file in site.static_files %}
-* [{{ file.path }}]({{ file.path }})
+* [{{ file.basename }}]({{ file.path|url_encode }})
 {% endfor %}
