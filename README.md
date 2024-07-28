@@ -5,5 +5,5 @@
 
 {% assign image_files = site.static_files | where: "image", false %}
 {% for a in image_files %}
-* [{{ file.basename }}]({{ file.path | replace: '#','%23' }})
+* [{{ a.basename }}]({{ a.path | replace: '#','%23' }})
 {% endfor %}
